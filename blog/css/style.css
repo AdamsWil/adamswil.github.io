@@ -1,0 +1,286 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+/* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+  font-family: "rozhaone";
+  src: url("../fonts/serif/rozhaone-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../fonts/sans-serif/lato-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/sans-serif/montserrat-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: lato, Arial, sans-serif;
+  color: #262626;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: montserrat, helvetica, sans-serif;
+  letter-spacing: 0.025rem;
+}
+
+figcaption {
+  font-family: lato, Arial, sans-serif;
+  color: #262626;
+  font-size: 0.9rem;
+}
+
+.highlight {
+  display: inline-block;
+  font-family: rozhaone, georgia, serif;
+  border: 1px solid black;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.25rem 1rem;
+  background-color: #b14229;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  box-shadow: 5px 5px 4px -3px #888;
+}
+
+h1 {
+  font-size: 3.25rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  transform: rotate(-4deg);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #888;
+  color: black;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.2rem tex;
+}
+
+time {
+  font-style: italic;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 1.5rem auto;
+  width: 90%;
+  min-width: 56.25rem;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 1rem;
+}
+
+article {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+aside {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  border-left: 2px solid black;
+  padding-left: 1rem;
+}
+
+.subsection {
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0px;
+}
+
+button {
+  display: inline-block;
+  font-family: rozhaone, georgia, serif;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem 0.5rem;
+  background-color: #2d9bac;
+  color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 4px -3px #888;
+  font-size: 2rem;
+}
+
+.article-image {
+  width: 33%;
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+aside img {
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+aside p {
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
+  color: #131313a6;
+}
+
+.subsection {
+  margin: 1rem 0rem;
+}
+
+.subsection figure {
+  margin: 0rem 0.2rem;
+  background-color: #b7ad92;
+  border-radius: 8px;
+}
+
+.subsection figure figcaption {
+  padding: 0.7rem 1rem;
+}
+
+.subsection figure img {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+nav a:hover {
+  text-transform: uppercase;
+}
+
+nav a:active {
+  color: black;
+  text-decoration: line-through;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1.25rem 2rem;
+  font-size: 1.2rem;
+  font-family: lato, Arial, sans-serif;
+}
+
+nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 0.025rem;
+}
+
+.expand {
+  font-size: 0.5rem;
+  padding-left: 0.3rem;
+}
+
+footer {
+  position: bottom;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.copyright {
+  color: #888;
+  text-align: left;
+  height: 1px;
+  max-width: fit-content;
+}
+
+.attribution {
+  text-align: right;
+  color: #888;
+  font-size: 0.8rem;
+  
+}
+
+.attribution a {
+  color: black;
+  font-family: lato;
+}
